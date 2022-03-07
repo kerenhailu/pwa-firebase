@@ -12,7 +12,7 @@ const FirebaseProvider=({children})=>{
   const [user]=useAuthState(firebaseAuth);
   const [auth,setAuth]=useState(null);
   useEffect(()=>{
-    setAuth(user)
+    setAuth(firebaseAuth)
   },[])
   return (
       <FirebaseContext.Provider value={{user,auth}}>
